@@ -1,0 +1,296 @@
+:root{
+    --main-color:#313a49;
+    --sec-color:#53ffaa;
+    --bg-color:#202632;
+    --main-transition:all 0.2s 0s linear
+}
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+html{
+    scroll-behavior: smooth;
+}
+body{
+    font-family: "Manrope", sans-serif;
+    /* overflow: hidden; */
+}
+::selection{
+    background-color: var(--sec-color);
+    color: var(--main-color);
+}
+main{
+    background-image: url(../images/bg.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--bg-color);
+    height: 100vh;
+    padding-top: 50px;
+}   
+.container{
+    width: 80%;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: var(--bg-color);
+    /* margin-top: 40px; */
+    box-shadow: 2px 2px 30px 5px var(--sec-color);
+    height: calc(100vh - 100px);
+    position: relative;
+    background-image: url(../images/container-bg.jpg);
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 6px;
+    position: relative;
+}
+.container > p{
+    position: absolute;
+    left: 50%;
+    bottom: 20px;
+    transform: translateX(-50%);
+    color: white;
+    z-index: 7;
+}
+.container > p a{
+    color: var(--sec-color);
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    
+}
+.container > .bookmarks{
+    position: absolute;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    flex-wrap: wrap;
+}
+.container > .bookmarks a{
+    font-size: 20px;
+    text-decoration: none;
+    transition: var(--main-transition);
+    padding: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 6px;
+    box-shadow: 2px 2px 0px 0px transparent;
+}
+.container > .bookmarks a:hover{
+    box-shadow: 2px 2px 0px 0px var(--sec-color);
+    background-color: var(--main-color);
+}
+.container > .bookmarks a:not(:last-child){
+    margin-right: 10px;
+}
+.container > .bookmarks a:nth-child(1){
+    color: #ff0000;
+}
+.container > .bookmarks a:nth-child(2){
+    color: #34a853;
+}
+.container > .bookmarks a:nth-child(3){
+    color: #1877f2;
+}
+.container > .bookmarks a:nth-child(4){
+    color: #14a800;
+    font-weight: bold
+}
+.container > .bookmarks a:nth-child(5){
+    color: #4285f4;
+}
+.container > .bookmarks a:nth-child(6){
+    color: #4078c0;
+}
+.container > .bookmarks a:nth-child(7){
+    color: #ea4335;
+}
+.box{
+    background-color: var(--main-color);
+    height: fit-content;
+    max-width: 80%;
+    min-width: 50%;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    padding: 40px 20px 60px;
+    color: white;
+    border-radius: 6px;
+    box-shadow: 2px 2px 10px 10px #1c212a;
+    position: relative;
+    z-index: 10;
+}
+.box .arrow{
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-color: var(--sec-color);
+    color: var(--main-color);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    cursor: pointer;
+    font-family: 'Amiri', serif;
+    transition: var(--main-transition);
+}
+.box .right{
+    right: 0;
+    transform: translate(80%,-50%);
+    font-size: 20px;
+}
+.box .left{
+    font-size: 20px;
+    left: 0;
+    transform: translate(-80%,-50%);
+}
+.box .arrow:hover{
+    box-shadow: 0px 0px 25px 10px var(--sec-color);
+}
+@media (max-width:640px) {
+    .box{
+        width: 80%;
+    }
+}
+.box span{
+    font-size: 12px;
+    color: var(--sec-color);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.box p{
+    position: relative;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    font-size: 22px;
+    font-weight: bold;
+    border-bottom: 1px solid var(--sec-color);
+    min-height: 150px;
+    line-height: 2.2;
+    font-family: 'Amiri', serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.box p i{
+    position: absolute;
+    bottom: -190px;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    padding: 10px;
+    background-color: var(--main-color);
+    z-index: 4;
+}
+.box form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+.box form ul{
+    position: absolute;
+    background-color: var(--main-color);
+    list-style: none;
+    z-index: 20;
+    top: 100%;
+    left: 25%;
+    border-radius: 6px;
+    padding: 0px 10px;
+}
+@media (max-width:992px) {
+    .box form ul{
+        left: 20%;
+    }
+}
+@media (max-width:767px) {
+    .box form ul{
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.box form ul li{
+    padding: 10px;
+    font-weight: bold;
+    text-align: left;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.box form ul li:not(:last-child){
+    border-bottom: 1px solid white;
+}
+.box form ul li a{
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    height: 100%;
+}
+.box form ul li:hover a{
+    color: var(--sec-color);
+}
+.box input[type="text"]{
+    color: var(--sec-color);
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: 3px solid var(--sec-color);
+    width: fit-content;
+    display: block;
+    font-weight: bold;
+    transition: var(--main-transition);
+    background-color: transparent;
+}
+.box input:focus{
+    outline: none;
+}
+.box input[type="submit"]{
+    background-color: var(--sec-color);
+    font-weight: bold;
+    padding:5px 10px;
+    color: var(--main-color);
+    border-radius: 6px;
+    border: none;
+    cursor: pointer;
+    margin-left: 20px;
+}
+.box > a:hover{
+    background-color: var(--sec-color);
+    color:var(--main-color);
+}
+.box .img{
+    position: absolute;
+    background-color: var(--sec-color);
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 50%;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 50%);
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+.box .img:hover{
+    box-shadow: 0px 0px 25px 10px var(--sec-color);
+}
+@media (max-width:640px) {
+    .box form{
+        flex-direction: column-reverse;
+    }
+    .box form input[type="submit"]{
+        margin-left: 0;
+        margin-bottom: 10px;
+    }
+}
+
+
+
