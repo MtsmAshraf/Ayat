@@ -88,27 +88,33 @@ main{
 .container > .bookmarks a:not(:last-child){
     margin-right: 10px;
 }
-.container > .bookmarks a:nth-child(1){
+.container > .bookmarks a.youtube{
     color: #ff0000;
 }
-.container > .bookmarks a:nth-child(2){
+.container > .bookmarks a.google{
     color: #34a853;
 }
-.container > .bookmarks a:nth-child(3){
+.container > .bookmarks a.facebook{
     color: #1877f2;
 }
-.container > .bookmarks a:nth-child(4){
+.container > .bookmarks a.upwork{
     color: #14a800;
     font-weight: bold
 }
-.container > .bookmarks a:nth-child(5){
+.container > .bookmarks a.google-translate{
     color: #4285f4;
 }
-.container > .bookmarks a:nth-child(6){
+.container > .bookmarks a.gitHub{
     color: #4078c0;
 }
-.container > .bookmarks a:nth-child(7){
+.container > .bookmarks a.gmail{
     color: #ea4335;
+}
+.container > .bookmarks a.linkedin{
+    color: #0a66c2;
+}
+.container > .bookmarks a.mostaql{
+    color: #2aa7de;
 }
 .box{
     background-color: var(--main-color);
